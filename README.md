@@ -1,2 +1,2 @@
-# World_through_News
+# LovelaceCrewProject
 Our final project Data story
