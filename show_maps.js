@@ -1,8 +1,8 @@
 const maps = [
     //"maps/static_event.html",
     //"maps/static_mention.html",
-    "maps/dynamic_events.html",
-    "maps/dynamic_mentions.html",
+    "./maps/dynamic_events.html",
+    "./maps/dynamic_mentions.html",
 ];
 
 
