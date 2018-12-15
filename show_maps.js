@@ -15,6 +15,6 @@ function showMap(idx) {
         .attr('height', "900")
         .attr('class', 'center-block');
 
-    d3.select(`#button${i}`)
-        .remove();
+    //d3.select(`#button${i}`)
+    //    .remove();
 }
