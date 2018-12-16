@@ -120,14 +120,16 @@
 
 
             <button type="button" id="button1" class="btn btn-info btn-lg center-block" onclick="showMap(1)">Show map</button>
-            <p class="lead">Human Activity Analysis</p>
+            <p class="lead">However, since we observed that the total number of mentions worldwide was stable throughout the months, we decided to keep the mediatic attention as a measurement of the value given to an event. The human activity, on the other hand, represents 
+            the events mentioned in the news. In this way, it does not portray all events taking place in the country, but only what is relayed by the media. However, we assume here that it is an accurate representation of what is happening in a country. What jumps to the 
+            eyes on these 2 maps is the prevalence of the United States in both human activity and media coverage. Even though they are the 3rd biggest country in terms of surface area, they have no particular reasons to be that prominent in the news. This indicates an important 
+            bias in our dataset, as most of the recorded events took place in the USA. This can be related to the fact that most of the sources considered by the database have their head office in the USA. 
+            </p>
             <div>
               <a href="https://plot.ly/~bizeul1/11/?share_key=71PT3ED1o9IBxNbbzI5Sb8" target="_blank" title="Plot 11" style="display: block; text-align: center;"><img src="https://plot.ly/~bizeul1/11.png?share_key=71PT3ED1o9IBxNbbzI5Sb8" alt="Plot 11" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
               <script data-plotly="bizeul1:11" sharekey-plotly="71PT3ED1o9IBxNbbzI5Sb8" src="https://plot.ly/embed.js" async></script>
             </div>
 
-
-            <p class="lead">Mediatic Coverage Analysis</p>
           </div>
           </div>
         </div>
@@ -140,18 +142,22 @@
           <div class="col-lg-8 mx-auto">
             <h2>Does Instability mean Content ?</h2>
              <hr>
-            <p class="lead"> Goldstein Intro</p>
+            <p class="lead"> We then evaluated the relationship between the news related to an event and the Goldstein scale of the event, which as written above, is the theoretical impact the event could have on the country. A lower score indicates more potential for the event 
+            to destabilize a country, whereas a higher score indicates a trend for the event to lead to the country’s stabilization. We wanted to observe whether the Goldstein score of an event was proportional to the number of mentions it received, to see whether the media would 
+            give more weight to the destabilizing events than the positive ones. We observed that the average number of mentions per event for each Goldstein score was more or less constant. Thus, there did not seem to be any relationship between the Goldstein score and the media coverage. 
+            </p>
+            <br>
             <div>
               <a href="https://plot.ly/~bizeul1/5/?share_key=FWbahGgVm8fUr4XCotQDx0" target="_blank" title="Plot 5" style="display: block; text-align: center;"><img src="https://plot.ly/~bizeul1/5.png?share_key=FWbahGgVm8fUr4XCotQDx0" alt="Plot 5" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
               <script data-plotly="bizeul1:5" sharekey-plotly="FWbahGgVm8fUr4XCotQDx0" src="https://plot.ly/embed.js" async></script>
             </div>
-
-
-            <p class="lead"> Goldstein Analysis</p>
+            <p class="lead"> This lack of relationship was also displayed when selecting 5000 events and representing for each of them their mediatic coverage and Goldstein score. In order to confirm this, Pearson and Spearman coefficients were evaluated on 70’000 events, to have a reliable 
+            estimation with enough samples. Pearson coefficient indicates whether there is any linear relationship between the two variables, whereas Spearman indicates whether there is any monotonic relationship. Both methods returned values close to 0, suggesting the absence of any relationship 
+            between the two variables. This indicated that an increase in the potential of an event to stabilize the related country did not lead to an increase in media coverage, or the opposite.
+            </p>
             <div style="display: flex; justify-content: center;">
                 <img src="images/scatter_goldstein.svg" style="width: 700px; height: 500px;"/>
             </div>
-            <p class="lead"> To be filled</p>
           </div>
           </div>
         </div>
@@ -233,7 +239,7 @@
             <p align="middle">
               <a class="btn btn-info btn-lg center-block" href="https://github.com/laurefont/LovelaceCrewProject" target="_blank">LoveLace Crew's Repository</a>&nbsp;
             </p>
-
+            <br><br><br>
           </div>
           </div>
         </div>
