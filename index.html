@@ -56,6 +56,7 @@
             have access to were recorded between February 18th 2015 and September 9th 2017.
 
             </p>
+            <br>
           </div>
           </div>
         </div>
@@ -69,13 +70,27 @@
           <div class="col-lg-8 mx-auto">
             <h2>Data Exploration</h2>
              <hr>
-            <p class="lead"> Sources Analysis</p>
+            <p class="lead"> We first explored the dataset, to see what we would have to deal with. Because mentions can refer to events which happened minutes ago as well as to events which happened months ago, some events referred to in the mentions 
+            took place before the beginning of the recording. Their first mentions were thus not recorded in the database. Likewise, the events taking place at the end of the recording had less chance to be mentioned. In order to give each event the 
+            same weight in terms of related mentions, only the events taking place after February 18th 2015 and before July 9th 2017 were retained.  
+            </p>
+            <p class="lead">We found out that most of the sources were web sources and that offline sources were only slightly represented. This makes sense since web sources are spreading in a world where everyone has unlimited instantaneous access 
+            to information on the internet but needs to pay for a newspaper. Besides, the database can easily access the news published on the web, as they are available worldwide, whereas they would need to be in the country where a newspaper is published 
+            to get it. To support this, the web portal yahoo.com was the first ranked source with more than 18 millions mentions, whereas the second sources only had 1.8 millions. This is coherent with the fact that yahoo was rated the most widely read news 
+            and media website in 2016 by the web traffic analysis company Alexa. On top of that, we found that although most sources had their headquarters in the United States,  there were still sources from other countries as the UK, Australia, India .
+            </p>
+            <br>
             <div>
               <a href="https://plot.ly/~ADAforever1/4/?share_key=Z8UvMsRVANO3HdYfqlpB1K" target="_blank" title="Source_Type_Analysis" style="display: block; text-align: center;"><img src="https://plot.ly/~ADAforever1/4.png?share_key=Z8UvMsRVANO3HdYfqlpB1K" alt="Source_Type_Analysis" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
               <script data-plotly="ADAforever1:4" sharekey-plotly="Z8UvMsRVANO3HdYfqlpB1K" src="https://plot.ly/embed.js" async></script>
             </div>
-            <p class="lead"> Sources Analysis</p>
-            <p class="lead"> Confidence Analysis</p>
+            <br>
+            <p class="lead">We then looked at the confidence of each mention. This value represents the estimation of the confidence at which an event is extracted from a news report. The confidence is higher for news report which focus on an event, whereas 
+            it is lower for mentions which only briefly describe the event. Half of the mentions were recorded with less than 50% confidence and one third of the mentions were recorded with less than 20% confidence. Most events thus required hard work from 
+            the algorithm to detect them, rendering the accuracy of the extraction less confident.  Since our analysis focused on the number of mentions per event and since the database contained millions of mentions, the mentions with less than 20% confidence 
+            were removed, in order to keep only the reports which seriously mentioned the events. 
+            </p>
+            <br>
             <div>
               <a href="https://plot.ly/~bizeul1/25/?share_key=bkHj0Py4DEyJxLwScKeFfS" target="_blank" title="Plot 25" style="display: block; text-align: center;"><img src="https://plot.ly/~bizeul1/25.png?share_key=bkHj0Py4DEyJxLwScKeFfS" alt="Plot 25" style="max-width: 100%;width: 700px;"  width="700" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
               <script data-plotly="bizeul1:25" sharekey-plotly="bkHj0Py4DEyJxLwScKeFfS" src="https://plot.ly/embed.js" async></script>
